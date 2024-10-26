@@ -1,14 +1,12 @@
 
 
-public class Filme {
-    protected String titulo;
-    protected int ano;
-    protected String genero;
-
-    public Filme (String titulo, int ano, String genero){
-        this.titulo = titulo;
-        this.ano = ano;
-        this.genero = genero;
+public class Filme extends Produto {
+    public Filme(String titulo, int ano, String genero) {
+        super(titulo, ano, genero);
     }
 
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Filme: " + titulo + " | Ano: " + ano + " | Gênero: " + genero);
+    }
 }
